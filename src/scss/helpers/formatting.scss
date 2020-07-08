@@ -1,0 +1,30 @@
+@mixin flx($align: null, $direction: null) {
+    display: flex;
+    @if ($direction == "col") {
+        flex-direction: column;
+        @if ($align == "vt") {
+            justify-content: center;
+        }
+        @if ($align == "hz") {
+            align-items: center;
+        }
+    } @else if ($direction == "row") {
+        flex-direction: row;
+        @if ($align == "vt") {
+            align-items: center;
+        }
+        @if ($align == "hz") {
+            justify-content: center;
+        }
+        @if ($align == "top") {
+            align-items: flex-start;
+        }
+        @if ($align == "btm") {
+            align-items: flex-end;
+        }
+        
+    } @else if ($align == "center") {
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MainComponent from './application/main';
+import LoginComponent from './modules/auth/login';
+import ForgetPasswordComponent from './modules/auth/forgetPassword';
+import { Helmet } from 'react-helmet';
+import PrivateRoute from './common/privateRoute';
+import './scss/global.scss'; 
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Helmet>
+        <title>Trabaya</title>
+      </Helmet>
+      <Switch>
+        <Route exact path="/login" component={LoginComponent} />
+        <Route
+          exact
+          path="/forgot-password"
+          component={ForgetPasswordComponent}
+        />
+        <PrivateRoute path="/" component={MainComponent} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,104 @@
+
+
+//variables
+$color-White:#ffffff;
+$color-Black:#000000;
+
+$color-green1:#51A94B;
+$color-green2:#33862d;
+$color-green3:#1d5e18;
+
+$color-grey1:#f5f7fa;
+$color-grey2:#e4e7eb;
+$color-grey3:#cbd2d9;
+$color-grey4:#9aa5b1;
+$color-grey5:#7b8794;
+$color-grey6:#616e7c;
+$color-grey9:#323f4b;
+
+$color-LightBlue1:#ebf8ff;
+$color-LightBlue5:#55aad4;
+$color-LightBlue6:#3994c1;
+$color-LightBlue7:#2d83ae;
+$color-LightBlue8:#1d6f98;
+
+$color-Green5:#57AE5B;
+
+$color-Red8:#ab091e;
+
+//end - variables
+
+
+$higlight-color:$color-green1;
+
+$box-shadow: 0 1px 3px 0 rgba(27,36,50,0.15);
+//common
+$border-color-light:$color-grey1;
+$border-color:$color-grey2;
+$border-color-dark:$color-grey4;
+$error-color:$color-Red8;
+$container-bg-color:$color-grey1;
+$container-bg-light-color:$color-White;
+//end - common
+
+
+//title
+$title-color :$color-grey9;
+//end - title
+
+// header
+$header-fontsize: 11px;
+$header-height: 58px;
+$header-font-color : $color-grey6;
+$header-active : $color-LightBlue8;
+// end - header
+
+//page
+$page-fontsize: 24px;
+$page-container:1400px;
+$page-padding:24px;
+$page-inverted-font-color:$color-grey1;
+//end - page
+
+//button
+$button-color:$color-green1;
+$button-color-hover:$color-green2;
+$button-color-active:$color-green3;
+$button-font-color:$color-grey1;
+
+$button-inverted-color:$color-grey1;
+$button-inverted-color-hover:$color-grey2;
+$button-inverted-color-active:$color-grey3;
+$button-inverted-font-color:$color-green1;
+
+//end -button
+
+//text box
+$textbox-border-color:$color-grey2;
+$textbox-font-color:$color-grey6;
+$textbox-placeholder-color:$color-grey6;
+//end - text box
+
+//link
+$link-color:$color-LightBlue6;
+$link-color-hover:$color-LightBlue5;
+$link-color-active:$color-LightBlue8;
+//end - link
+
+//tabs
+ $tabs-color:$color-grey5;
+ $tabs-active-color:$color-LightBlue8;
+
+//end -tabs
+$icon-color:$color-grey5;
+$icon-color-hover:$color-LightBlue5;
+$icon-color-active:$color-LightBlue8;
+//icon
+
+//end - icon
+
+//media
+ $media-mobile:546px;
+ $media-tab:768px;
+
+//end media

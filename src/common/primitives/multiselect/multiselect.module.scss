@@ -1,0 +1,11 @@
+@import '../../../scss/style.scss';
+
+.multiWrp{
+    width: 100%;
+    border: 1px solid $border-color;
+    .dorpWrp{
+        width: 100%;
+        border: none;
+    }
+}
+

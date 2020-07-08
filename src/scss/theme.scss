@@ -1,0 +1,56 @@
+@import "./theme-variables.scss";
+
+@mixin page-title {
+  font-size: $page-fontsize;
+}
+
+@mixin page-container {
+  max-width: $page-container;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin content-block {
+  border: 1px solid $border-color;
+  border-radius: 5px;
+}
+
+
+@mixin label {
+  color: $font-color;
+}
+
+@mixin sub-navi{
+  font-size: 14px;
+  color: $header-active ;
+}
+
+@mixin body-icon{
+  color: $icon-color;
+  &:hover{
+    color: $icon-color-hover;
+  }
+  &:active{
+    color: $icon-color-active;
+  }
+}
+
+@mixin line-row($side ) {
+  @if ($side == "top") {
+    border-top: 1px solid $border-color-light;
+  }
+  @if ($side == "btm") {
+    border-bottom: 1px solid $border-color-light;
+  }
+  @if ($side == "all") {
+    border: 1px solid $border-color-light;
+  } 
+  padding: 16px 0;
+}
+
+@mixin clacmin($property, $main, $sub) {
+  #{$property}: calc(#{$main} - #{$sub});
+}
+@mixin clacplus($property, $main, $sub) {
+#{$property}: calc(#{$main} + #{$sub});
+}

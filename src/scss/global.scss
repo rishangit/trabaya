@@ -1,0 +1,106 @@
+@import "./style.scss";
+
+body {
+    margin: 0;
+    font-family: "lato-regular";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+}
+
+input:active,
+select:active,
+textarea:active,
+button:active {
+    border: none !important;
+}
+
+ul {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "lato-light";
+    color: $title-color;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -0.67px;
+    &.medium {
+        font-size: 30px;
+        letter-spacing: -0.42px;
+        line-height: 1.2;
+    }
+}
+h2 {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: -0.75px;
+    &.medium {
+        font-size: 24px;
+    }
+}
+
+h4 {
+    font-size: 24px;
+    &.medium {
+        font-size: 20px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+    &.medium {
+        font-size: 16px;
+    }
+}
+
+p {
+    font-family: "lato-light";
+    font-size: 18px;
+    &.small {
+        font-family: "lato-regular";
+        font-size: 16px;
+    }
+}
+
+.caption {
+    font-size: 14px;
+    &.small {
+        font-size: 12px;
+    }
+}
+
+a {
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+    &:active {
+        color: $link-color-active;
+    }
+}
+
+label{
+    font-size: 14px;
+    margin: 0;
+}
+
+.slider-open{
+    overflow: hidden;
+}

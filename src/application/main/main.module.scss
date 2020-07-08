@@ -1,0 +1,9 @@
+@import "../../scss/style.scss";
+
+.mainWrp {
+  margin-top: $header-height;
+  .mainCon {
+    @include page-container();
+    font-family: "lato-light";
+  }
+}

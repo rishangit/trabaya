@@ -1,0 +1,52 @@
+@import "../../scss/style.scss";
+.headerWrp {
+  @include flx("center");
+  height: $header-height;
+  background: $container-bg-light-color;
+  box-shadow: $box-shadow;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+
+  .headerCon {
+    @include page-container();
+    @include flx("vt", "row");
+    height: 100%;
+    .menuWrp {
+      @include flx("vt", "row");
+      font-size: $header-fontsize;
+      list-style: none;
+      margin-bottom: 0;
+      height: 100%;
+      float: left;
+      .menuItem {
+        @include flx("center");
+        padding: 0 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $header-font-color;
+        &.active {
+          color: $header-active !important;
+          font-family: "lato-bold";
+          font-weight: 600;
+        }
+      }
+    }
+    .loggedUserWrp {
+      @include flx("center");
+      height: 100%;
+      float: right;
+      margin-left: auto;
+      .loggedUserCon {
+        @include flx("vt", "row");
+        border-left: 1px solid $border-color;
+        padding: 0 16px;
+        height: 32px;
+        .icon {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

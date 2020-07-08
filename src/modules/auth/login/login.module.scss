@@ -1,0 +1,59 @@
+@import '../../../scss/style.scss';
+
+.login {
+  @include flx('center');
+  background-color: $higlight-color;
+  height: 100vh;
+  color: $page-inverted-font-color;
+  .container {
+    @include flx('hz', 'col');
+    width: 500px;
+    margin-top: 100px;
+    .title {
+      @include flx('center');
+      font-family: 'lato-bold';
+      color: $page-inverted-font-color;
+    }
+    .subtitle {
+      font-family: 'lato-light';
+      color: $page-inverted-font-color;
+    }
+    .form {
+      @include flx('hz', 'col');
+      width: 800px;
+      margin-top: 50px;
+
+      .formContainer {
+        position: relative;
+        width: 100%;
+        .textBox {
+          width: 100%;
+          min-height: auto;
+          div {
+            position: absolute;
+          }
+        }
+      }
+
+      .linksWrapper {
+        @include flx('vt', 'row');
+        width: 100%;
+        .rememberMeWrapper {
+          float: left;
+          margin-right: auto;
+        }
+        .forgetPassword {
+          float: right;
+          margin-left: auto;
+        }
+      }
+      .btnWrapper {
+        @include flx('center');
+        width: 100%;
+        .loginButton {
+          float: left;
+        }
+      }
+    }
+  }
+}

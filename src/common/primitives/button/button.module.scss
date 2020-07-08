@@ -1,0 +1,37 @@
+@import '../../../scss/style.scss';
+.button {
+
+  outline-color: transparent;
+  border-color: transparent;
+  border: transparent;
+  padding: 15px 65px;
+  font-size:16px;
+  line-height: 17px;
+  margin: 0 5px;
+
+  &.regular {
+    background-color: $button-color;
+    color: $button-font-color;
+    &:hover {
+        background-color: $button-color-hover;
+    }
+    &:active {
+        background-color: $button-color-active;
+        outline: none;
+        border: none;
+    }
+  }
+
+  &.inverted {
+    color: $button-inverted-font-color;
+    background-color: $button-inverted-color;
+    &:hover {
+        background-color: $button-inverted-color-hover;
+    }
+    &:active {
+        background-color: $button-inverted-color-active;
+        outline: none;
+        border: none;
+    }
+  }
+}

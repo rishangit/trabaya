@@ -1,0 +1,36 @@
+@import '../../../scss/style.scss';
+
+$seleced-chip-bg-color:$color-grey2;
+.react-dropdown-select-dropdown {
+    width: 100% !important;
+    max-height: 240px !important;   
+
+    .react-dropdown-select-item{
+        color: $title-color;
+        height: 48px;
+        font-size: 18px;
+        line-height: 36px;
+        &:hover{
+            background: $button-color-hover;
+            color: $button-font-color;
+        }
+        &.react-dropdown-select-item-selected{
+            background-color: $button-color-active;
+        }
+    }
+
+}
+.react-dropdown-select-content {
+    .react-dropdown-select-option {
+        background: $seleced-chip-bg-color;
+        border: 1px solid $border-color-dark;
+        color: $title-color;
+        font-size: 14px;
+
+        .react-dropdown-select-option-remove{
+            font-size: 22px;
+            margin: 1px -7px 0 12px;
+        }
+
+    }
+}

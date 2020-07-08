@@ -1,0 +1,44 @@
+@import "../../../scss/style.scss";
+
+.textBoxWrp {
+    @include flx("hz", "col");
+    &.error {
+        .textBox {
+            border: 1px solid $error-color;
+        }
+    }
+    .textBox {
+        border: 1px solid $textbox-border-color;
+        min-height: 72px;
+        font-size: 14px;
+        color: $textbox-font-color;
+        padding: 7px 12px;
+        border-radius: 2px;
+        width: inherit;
+        resize: none;
+
+        &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $textbox-placeholder-color;
+            opacity: 1; /* Firefox */
+            font-family: 'lato-light';
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $textbox-placeholder-color;
+            font-family: 'lato-light';
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $textbox-placeholder-color;
+            font-family: 'lato-light';
+        }
+    }
+    .errorMsg {
+        float: right;
+        margin-left: auto;
+        color: $error-color;
+    }
+}
