@@ -1,104 +1,49 @@
+@import './variable.scss';
+
+$higlight-color: var(--theme-higlight-color, #51a94b);
+
+$button-color: var(--theme-button-color, #51a94b);
+$button-hover-color: var(--theme-button-hover-color, #33862d);
+$button-active-color: var(--theme-button-active-color, #1d5e18);
+$button-font-color: var(--theme-button-font-color, #ffffff);
+
+$inverted-button-color: var(--theme-inverted-button-color, #f5f7fa);
+$inverted-button-hover-color: var(--theme-inverted-button-hover-color, #e4e7eb);
+$inverted-button-active-color: var(--theme-inverted-button-active-color, #cbd2d9);
+$inverted-button-font-color: var(--theme-inverted-button-font-color, #51a94b);
 
 
-//variables
-$color-White:#ffffff;
-$color-Black:#000000;
-
-$color-green1:#51A94B;
-$color-green2:#33862d;
-$color-green3:#1d5e18;
-
-$color-grey1:#f5f7fa;
-$color-grey2:#e4e7eb;
-$color-grey3:#cbd2d9;
-$color-grey4:#9aa5b1;
-$color-grey5:#7b8794;
-$color-grey6:#616e7c;
-$color-grey9:#323f4b;
-
-$color-LightBlue1:#ebf8ff;
-$color-LightBlue5:#55aad4;
-$color-LightBlue6:#3994c1;
-$color-LightBlue7:#2d83ae;
-$color-LightBlue8:#1d6f98;
-
-$color-Green5:#57AE5B;
-
-$color-Red8:#ab091e;
-
-//end - variables
+$chcekbox-color: var(--theme-chcekbox-color, #7b8794);
+$multiselect-chip-color: var(--theme-multiselect-chip-color, #55aad4);
 
 
-$higlight-color:$color-green1;
-
-$box-shadow: 0 1px 3px 0 rgba(27,36,50,0.15);
-//common
-$border-color-light:$color-grey1;
-$border-color:$color-grey2;
-$border-color-dark:$color-grey4;
-$error-color:$color-Red8;
-$container-bg-color:$color-grey1;
-$container-bg-light-color:$color-White;
-//end - common
+$textbox-border-color: var(--theme-textbox-border-color, #e4e7eb);
+$textbox-font-color: var(--theme-textbox-font-color, #616e7c);
+$textbox-placeholder-color: var(--theme-textbox-placeholder-color, #cbd2d9);
 
 
-//title
-$title-color :$color-grey9;
-//end - title
+$panal-bg-color: var(--theme-panal-bg-color, #fbfcfc);
+$panal-bg-light-color: var(--theme-panal-bg-light-color, #ffffff);
+$panal-bg-dark-color: var(--theme-panal-bg-dark-color, #eceaeb);
+$panal-inverted-font-color: var(--theme-panal-inverted-font-color, #ffffff);
+$panal-font-color: var(--theme-panal-font-color, #7b8794);
+$panel-font-dark-color: var(--theme-panel-font-dark-color, #4a484b);
 
-// header
-$header-fontsize: 11px;
-$header-height: 58px;
-$header-font-color : $color-grey6;
-$header-active : $color-LightBlue8;
-// end - header
 
-//page
-$page-fontsize: 24px;
-$page-container:1400px;
-$page-padding:24px;
-$page-inverted-font-color:$color-grey1;
-//end - page
 
-//button
-$button-color:$color-green1;
-$button-color-hover:$color-green2;
-$button-color-active:$color-green3;
-$button-font-color:$color-grey1;
+$border-color: var(--theme-border-color, #f5f7fa);
+$border-dark-color: var(--theme-border-dark-color, #9aa5b1);
 
-$button-inverted-color:$color-grey1;
-$button-inverted-color-hover:$color-grey2;
-$button-inverted-color-active:$color-grey3;
-$button-inverted-font-color:$color-green1;
+$error-color: var(--theme-error-color, #ab091e);
 
-//end -button
 
-//text box
-$textbox-border-color:$color-grey2;
-$textbox-font-color:$color-grey6;
-$textbox-placeholder-color:$color-grey6;
-//end - text box
+//header
+$header-height: var(--theme-header-height, 60px);
+$header-font-color: var(--theme-header-font-color, #ffffff);
+//end header
 
-//link
-$link-color:$color-LightBlue6;
-$link-color-hover:$color-LightBlue5;
-$link-color-active:$color-LightBlue8;
-//end - link
 
-//tabs
- $tabs-color:$color-grey5;
- $tabs-active-color:$color-LightBlue8;
-
-//end -tabs
-$icon-color:$color-grey5;
-$icon-color-hover:$color-LightBlue5;
-$icon-color-active:$color-LightBlue8;
-//icon
-
-//end - icon
-
-//media
- $media-mobile:546px;
- $media-tab:768px;
-
-//end media
+//navigation 
+$navi-width: var(--theme-navi-width, 250px);
+//end - navigation
+$page-container: var(--theme-page-container, 1400px);

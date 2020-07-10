@@ -1,4 +1,10 @@
- export const serverPath = 'http://localhost:3005';
+ export const serverPath = 'http://localhost:3001';
 // export const serverPath = 'http://staging.traction.network';
 
-export const version = 'v1';
+export const Res = {
+  ERROR: 0,
+  SUCCESS_LIST: 1,
+  SUCCESS_OBJ: 2,
+  SUCCESS_EMPTY: 3,
+  SESSION_EXPIRE: 4,
+};

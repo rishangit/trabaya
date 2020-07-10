@@ -1,0 +1,42 @@
+@import '../../scss/style.scss';
+
+.navigation {
+  @include clacmin('height', 100%, $header-height);
+  width: $navi-width;
+  background-color: $panal-bg-dark-color;
+  position: absolute;
+  left: 0;
+  top: $header-height;
+  border-radius: 0 175px 0 0;
+  -webkit-box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
+  -moz-box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
+  box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
+  transition: left 1s;
+  &.hidden {
+    @include negative('left', $navi-width);
+  }
+  .container {
+    margin-top: 175px;
+    .navi-row {
+      @include flx('vt', 'row');
+      color: $panel-font-dark-color;
+      height: 50px;
+      margin: 10px 0 10px 20px;
+      border-radius: 25px 0 0 25px;
+      padding-left: 20px;
+      cursor: pointer;
+
+      &.active {
+        background-color: $panel-font-dark-color;
+        color: $panal-inverted-font-color;
+      }
+
+      .icon {
+        margin-right: 20px;
+      }
+
+      .label {
+      }
+    }
+  }
+}

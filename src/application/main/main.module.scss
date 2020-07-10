@@ -1,9 +1,17 @@
 @import "../../scss/style.scss";
 
-.mainWrp {
+.main-wrp {
   margin-top: $header-height;
-  .mainCon {
+  .main-con {
     @include page-container();
+    @include clacmin('width', 100% ,$navi-width);
+    background-color: $panal-bg-color;
     font-family: "lato-light";
+    margin-left: $navi-width;
+    transition: margin-left 1s;
+
+    &.hidden{
+      margin-left: 0;
+    }
   }
 }

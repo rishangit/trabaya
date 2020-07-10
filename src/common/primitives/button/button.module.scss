@@ -13,23 +13,23 @@
     background-color: $button-color;
     color: $button-font-color;
     &:hover {
-        background-color: $button-color-hover;
+        background-color:$button-hover-color;
     }
     &:active {
-        background-color: $button-color-active;
+        background-color: $button-active-color;
         outline: none;
         border: none;
     }
   }
 
   &.inverted {
-    color: $button-inverted-font-color;
-    background-color: $button-inverted-color;
+    color: $inverted-button-font-color;
+    background-color: $inverted-button-color;
     &:hover {
-        background-color: $button-inverted-color-hover;
+        background-color: $inverted-button-hover-color;
     }
     &:active {
-        background-color: $button-inverted-color-active;
+        background-color: $inverted-button-active-color;
         outline: none;
         border: none;
     }

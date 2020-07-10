@@ -19,7 +19,7 @@ $btn-wrp-height:87px;
     .btnWrp {
         @include flx("btm", "row");
         height: $btn-wrp-height;
-        background-color: $container-bg-color;
+        background-color: $panal-bg-color;
         width: 100%;
         padding: 0px $modal-padding 25px;
         .btnCon{

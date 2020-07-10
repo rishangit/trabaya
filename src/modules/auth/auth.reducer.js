@@ -8,6 +8,8 @@ import {
 } from './auth.action';
 
 import { LoginStatus, RegisterStatus } from './auth.constants';
+import { Res } from '../../common/constants';
+
 const initState = {
   loginStatus: LoginStatus.LOGIN_NEW,
   session: null,
@@ -17,14 +19,28 @@ const authReducer = (state = initState, action) => {
   let { type, payload } = action;
   switch (type) {
     case LOGIN_ATTEMPT:
-      break;
-    case LOGIN_SUCCESS:
-      localStorage.setItem('session', JSON.stringify(payload));
       return {
         ...state,
-        session: payload,
-        loginStatus: LoginStatus.LOGIN_SUCCESS,
+        loginStatus: LoginStatus.LOGIN_NEW,
       };
+    case LOGIN_SUCCESS: {
+      const { typ } = payload;
+      if (typ === Res.SUCCESS_OBJ) {
+        const { obj } = payload;
+        localStorage.setItem('session', JSON.stringify(obj));
+        return {
+          ...state,
+          session: obj,
+          loginStatus: LoginStatus.LOGIN_SUCCESS,
+        };
+      }else{
+        return {
+          ...state,
+          loginStatus: LoginStatus.ERROR,
+        };
+      }
+    }
+    break;
     case SET_USER:
       return {
         ...state,

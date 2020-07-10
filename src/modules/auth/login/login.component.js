@@ -28,7 +28,6 @@ const LoginComponent = props => {
     }
   }, [loginStatus]);
 
-  const handleRequestAccessClick = e => {};
 
   const handleOnSubmit = model => {
     dispatch(loginAttempt(model));
@@ -96,6 +95,7 @@ const LoginComponent = props => {
                     Login
                   </Button>
                 </div>
+                {loginStatus === LoginStatus.ERROR && <div>Invalid login</div>}
               </div>
             </form>
           )}

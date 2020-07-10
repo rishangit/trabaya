@@ -2,7 +2,8 @@
 export const LoginStatus = {
   LOGIN_NEW: 0,
   LOGIN_SUCCESS: 1,
-  LOGOUT: 2
+  LOGOUT: 2,
+  ERROR:3,
 };
 
 export const RegisterStatus = {

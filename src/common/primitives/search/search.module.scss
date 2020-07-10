@@ -1,0 +1,47 @@
+@import '../../../scss/style.scss';
+
+.search {
+  @include flx('vt', 'row');
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: $panal-bg-light-color;
+  .input {
+    height: 100%;
+    @include clacmin('width', 100%, 30px);
+    border: none;
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $textbox-placeholder-color;
+      opacity: 1; /* Firefox */
+      font-family: 'lato-light';
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $textbox-placeholder-color;
+      font-family: 'lato-light';
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $textbox-placeholder-color;
+      font-family: 'lato-light';
+    }
+  }
+  .icon-wrapper {
+    @include flx('center');
+    width: 30px;
+    background-color: $button-color;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    &:hover {
+      background-color: $button-hover-color;
+    }
+    &:active {
+      background-color: $button-active-color;
+    }
+  }
+}

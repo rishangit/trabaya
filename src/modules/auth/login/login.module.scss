@@ -4,7 +4,7 @@
   @include flx('center');
   background-color: $higlight-color;
   height: 100vh;
-  color: $page-inverted-font-color;
+  color: $panal-inverted-font-color;
   .container {
     @include flx('hz', 'col');
     width: 500px;
@@ -12,21 +12,21 @@
     .title {
       @include flx('center');
       font-family: 'lato-bold';
-      color: $page-inverted-font-color;
+      color: $panal-inverted-font-color;
     }
     .subtitle {
       font-family: 'lato-light';
-      color: $page-inverted-font-color;
+      color: $panal-inverted-font-color;
     }
     .form {
       @include flx('hz', 'col');
       width: 800px;
       margin-top: 50px;
 
-      .formContainer {
+      .form-container {
         position: relative;
         width: 100%;
-        .textBox {
+        .text-box {
           width: 100%;
           min-height: auto;
           div {
@@ -35,22 +35,22 @@
         }
       }
 
-      .linksWrapper {
+      .links-wrapper {
         @include flx('vt', 'row');
         width: 100%;
-        .rememberMeWrapper {
+        .remember-me-wrapper {
           float: left;
           margin-right: auto;
         }
-        .forgetPassword {
+        .forget-password {
           float: right;
           margin-left: auto;
         }
       }
-      .btnWrapper {
+      .btn-wrapper {
         @include flx('center');
         width: 100%;
-        .loginButton {
+        .login-button {
           float: left;
         }
       }

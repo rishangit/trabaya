@@ -25,32 +25,45 @@
   color: $header-active ;
 }
 
-@mixin body-icon{
-  color: $icon-color;
-  &:hover{
-    color: $icon-color-hover;
-  }
-  &:active{
-    color: $icon-color-active;
-  }
-}
-
-@mixin line-row($side ) {
-  @if ($side == "top") {
-    border-top: 1px solid $border-color-light;
-  }
-  @if ($side == "btm") {
-    border-bottom: 1px solid $border-color-light;
-  }
-  @if ($side == "all") {
-    border: 1px solid $border-color-light;
-  } 
-  padding: 16px 0;
-}
 
 @mixin clacmin($property, $main, $sub) {
   #{$property}: calc(#{$main} - #{$sub});
 }
 @mixin clacplus($property, $main, $sub) {
 #{$property}: calc(#{$main} + #{$sub});
+}
+
+@mixin negative($property, $val){
+  #{$property}: calc(-1 * #{$val});
+}
+
+@mixin flx($align: null, $direction: null) {
+  display: flex;
+  @if ($direction == "col") {
+      flex-direction: column;
+      @if ($align == "vt") {
+          justify-content: center;
+      }
+      @if ($align == "hz") {
+          align-items: center;
+      }
+  } @else if ($direction == "row") {
+      flex-direction: row;
+      @if ($align == "vt") {
+          align-items: center;
+      }
+      @if ($align == "hz") {
+          justify-content: center;
+      }
+      @if ($align == "top") {
+          align-items: flex-start;
+      }
+      @if ($align == "btm") {
+          align-items: flex-end;
+      }
+      
+  } @else if ($align == "center") {
+      align-items: center;
+      justify-content: center;
+  }
 }

@@ -1,51 +1,43 @@
-@import "../../scss/style.scss";
-.headerWrp {
-  @include flx("center");
+@import '../../scss/style.scss';
+.header {
+  @include flx('center');
   height: $header-height;
-  background: $container-bg-light-color;
-  box-shadow: $box-shadow;
+  background: $higlight-color;
+  color: $header-font-color;
   width: 100%;
   z-index: 100;
   position: fixed;
   top: 0;
 
-  .headerCon {
+  .container {
     @include page-container();
-    @include flx("vt", "row");
+    @include flx('vt', 'row');
     height: 100%;
-    .menuWrp {
-      @include flx("vt", "row");
-      font-size: $header-fontsize;
-      list-style: none;
-      margin-bottom: 0;
-      height: 100%;
-      float: left;
-      .menuItem {
-        @include flx("center");
-        padding: 0 15px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $header-font-color;
-        &.active {
-          color: $header-active !important;
-          font-family: "lato-bold";
-          font-weight: 600;
-        }
-      }
+    .menu {
+      @include flx('center');
+      width: 60px;
+      height: $header-height;
+      cursor: pointer;
     }
-    .loggedUserWrp {
-      @include flx("center");
-      height: 100%;
+
+    .search {
+      width: 400px;
+      height: 40px;
+      margin: 20px auto;
+    }
+
+    .right-wrapper {
+      @include flx('vt', 'row');
       float: right;
-      margin-left: auto;
-      .loggedUserCon {
-        @include flx("vt", "row");
-        border-left: 1px solid $border-color;
-        padding: 0 16px;
-        height: 32px;
-        .icon {
-          margin-right: 16px;
-        }
+
+      .notification {
+        @include flx('center');
+      }
+
+      .user {
+        @include flx('center');
+        width: 100px;
+        height:$header-height;
       }
     }
   }

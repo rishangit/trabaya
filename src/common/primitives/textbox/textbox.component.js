@@ -2,11 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './textbox.module.scss';
 
-// const TextBoxcomponent = (props) => {
-//     const {className, ...other} = props
-//   return <input {...other} className={classNames(styles.textBox, className)} />;
-// };
-
 const TextBoxcomponent = (props) => {
   const {
     className,

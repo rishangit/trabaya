@@ -13,10 +13,5 @@
         @include flx("vt", "row");
     }
 
-    .checkBlue{
-        background-color: $color-LightBlue7;
-    }
-    .checkGreen{
-        background-color: $color-Green5;
-    }
+    background-color :$chcekbox-color;
 }

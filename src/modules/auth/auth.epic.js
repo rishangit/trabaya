@@ -13,7 +13,7 @@ export const epicLogin = (action$, state$) => {
     ofType(LOGIN_ATTEMPT),
     switchMap(({ payload }) =>
       httpPost({
-        call: "users/sign_in",
+        call: "login_user",
         data: payload
       }).pipe(
         map(result => loginSuccess(result.response)))
