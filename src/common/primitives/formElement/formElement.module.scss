@@ -1,0 +1,16 @@
+@import '../../../scss/style.scss';
+@import '../textbox/textbox.module.scss';
+
+.form-element{
+  @include flx('vt', 'row');
+  background-color: $form-ele-bg-color;
+  padding: 0 15px;
+  box-sizing: border-box;
+  .textBox{
+    border: none;
+    input{
+      border: none;
+    }
+  }
+
+}

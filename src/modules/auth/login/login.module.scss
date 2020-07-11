@@ -9,6 +9,7 @@
     @include flx('hz', 'col');
     width: 500px;
     margin-top: 100px;
+    box-sizing: border-box;
     .title {
       @include flx('center');
       font-family: 'lato-bold';
@@ -20,18 +21,19 @@
     }
     .form {
       @include flx('hz', 'col');
+      color: $page-font-color;
       width: 800px;
       margin-top: 50px;
 
       .form-container {
         position: relative;
         width: 100%;
+        .formElement {
+          border-bottom: 1px solid $border-dark-color;
+        }
         .text-box {
           width: 100%;
           min-height: auto;
-          div {
-            position: absolute;
-          }
         }
       }
 
@@ -53,6 +55,37 @@
         .login-button {
           float: left;
         }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .login {
+    .container {
+      width: 576px;
+      padding: 0 10px;
+      .form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .login {
+    @include flx('top', 'col');
+    .container {
+      @include flx('hz', 'col');
+      width: 100%;
+      padding: 0 10px;
+      .title {
+        text-align: center;
+      }
+      .form {
+        width: 100%;
       }
     }
   }

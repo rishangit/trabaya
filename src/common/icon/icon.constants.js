@@ -1,5 +1,5 @@
 export const smSize = {
-  size: 12,
+  size: 16,
   className: 'iconColor',
 };
 

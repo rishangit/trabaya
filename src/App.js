@@ -6,9 +6,11 @@ import LoginComponent from './modules/auth/login';
 import ForgetPasswordComponent from './modules/auth/forgetPassword';
 import { Helmet } from 'react-helmet';
 import PrivateRoute from './common/privateRoute';
-import './scss/global.scss'; 
+import './scss/global.scss';
+import { loadTheme } from './modules/theme/theme.const';
 
 function App(props) {
+  loadTheme();
   return (
     <BrowserRouter>
       <Helmet>

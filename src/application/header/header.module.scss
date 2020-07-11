@@ -3,14 +3,14 @@
   @include flx('center');
   height: $header-height;
   background: $higlight-color;
-  color: $header-font-color;
   width: 100%;
-  z-index: 100;
+  z-index: 80;
   position: fixed;
   top: 0;
 
   .container {
     @include page-container();
+    color: $header-font-color;
     @include flx('vt', 'row');
     height: 100%;
     .menu {
@@ -32,12 +32,47 @@
 
       .notification {
         @include flx('center');
+        position: relative;
+        .count {
+          @include flx('center');
+          position: absolute;
+          top: -9px;
+          right: -11px;
+          min-width: 15px;
+          height: 15px;
+          border-radius: 14px;
+          background: $panel-font-dark-color;
+          font-size: 14px;
+          color: #fff;
+          padding: 0 2px;
+        }
       }
 
       .user {
         @include flx('center');
         width: 100px;
-        height:$header-height;
+        height: $header-height;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .container {
+      width: 100%;
+      .search {
+        @include clacmin('width', 100%, 115px);
+        margin: 0;
+      }
+      .right-wrapper {
+        .notification {
+          margin-left: 12px;
+        }
+
+        .user{
+          display: none;
+        }
       }
     }
   }

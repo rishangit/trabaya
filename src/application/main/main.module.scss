@@ -1,17 +1,44 @@
-@import "../../scss/style.scss";
+@import '../../scss/style.scss';
 
-.main-wrp {
-  margin-top: $header-height;
-  .main-con {
+.main-wrapper {
+  .container {
+    @include flx('center');
     @include page-container();
-    @include clacmin('width', 100% ,$navi-width);
-    background-color: $panal-bg-color;
-    font-family: "lato-light";
+    @include clacmin('width', 100%, $navi-width);
+    font-family: 'lato-light';
     margin-left: $navi-width;
-    transition: margin-left 1s;
-
-    &.hidden{
+    margin-top: $header-height;
+    transition: all 1s;
+    max-width: unset;
+    &.hidden {
       margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .main-wrapper {
+    .container {
+      width: 100%;
+      margin-left: 0;
+      &.hidden {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .main-wrapper {
+    .container {
+      width: 100%;
+      margin-left: 0;
+      &.hidden {
+        width: 100%;
+      }
     }
   }
 }

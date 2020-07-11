@@ -1,0 +1,29 @@
+@import '../../../scss/style.scss';
+
+.spring-dash{
+  @include flx('vt', 'col');
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  .department{
+    @include flx('vt', 'col');
+    padding-bottom: 15px;
+    .departmentName{
+      margin-bottom: 15px;
+    }
+    .user-container{
+      @include flx('vt', 'row');
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .spring-dash{
+    padding: 20px;
+    .department{
+      .user-container{
+        @include flx('hz', 'col');
+      }
+    }
+  }
+}

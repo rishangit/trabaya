@@ -1,0 +1,15 @@
+@import '../../scss/style.scss';
+
+.theme-wrapper {
+  @include flx('center');
+  margin-top: 200px;
+  .container {
+    @include flx('vt', 'row');
+    .theme-items {
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      cursor: pointer;
+    }
+  }
+}

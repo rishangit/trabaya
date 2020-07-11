@@ -2,16 +2,15 @@
 
 .navigation {
   @include clacmin('height', 100%, $header-height);
+  @include border-light();
   width: $navi-width;
   background-color: $panal-bg-dark-color;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: $header-height;
   border-radius: 0 175px 0 0;
-  -webkit-box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
-  -moz-box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
-  box-shadow: 9px 0px 21px -8px rgba(74, 72, 75, 1);
   transition: left 1s;
+  transition: 'display' 0 line 1s;
   &.hidden {
     @include negative('left', $navi-width);
   }
@@ -38,5 +37,41 @@
       .label {
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    z-index: 100;
+    border-radius: 0;
+    height: 100vh;
+    .container {
+      margin-top: $header-height;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navigation {
+    z-index: 100;
+    border-radius: 0;
+    top: 0;
+    height: 100vh;
+    &.hidden {
+      display: none;
+    }
+    .container {
+      margin-top: $header-height;
+    }
+  }
+  .blink {
+    width: 100vh;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 90;
+    top: 0;
   }
 }

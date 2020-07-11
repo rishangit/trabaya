@@ -1,5 +1,10 @@
 @import '../../../scss/style.scss';
 
+
+.drop-wrpper > div{
+    width: 100%;
+}
+
 .react-dropdown-select-dropdown {
     width: 100% !important;
     max-height: 240px !important;   

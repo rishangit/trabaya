@@ -12,6 +12,4 @@
     .label{
         @include flx("vt", "row");
     }
-
-    background-color :$chcekbox-color;
 }

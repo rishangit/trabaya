@@ -10,6 +10,7 @@ import {
   BtnType,
   CheckBox,
   CheckType,
+  FormElement,
 } from '../../../common/primitives';
 import { loginAttempt } from '../auth.action';
 import { LoginStatus } from '../auth.constants';
@@ -27,7 +28,6 @@ const LoginComponent = props => {
       history.push('/');
     }
   }, [loginStatus]);
-
 
   const handleOnSubmit = model => {
     dispatch(loginAttempt(model));
@@ -51,9 +51,9 @@ const LoginComponent = props => {
           }}
         >
           {({ handleSubmit, ...formikprops }) => (
-            <form onSubmit={handleSubmit}>
-              <div className={styles.form}>
-                <div className={styles.formContainer}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formContainer}>
+                <FormElement icon="user" className={styles.formElement}>
                   <TextBox
                     type="email"
                     name="username"
@@ -61,6 +61,8 @@ const LoginComponent = props => {
                     className={styles.textBox}
                     formProps={formikprops}
                   />
+                </FormElement>
+                <FormElement icon="padlock">
                   <TextBox
                     type="password"
                     name="password"
@@ -68,35 +70,33 @@ const LoginComponent = props => {
                     className={styles.textBox}
                     formProps={formikprops}
                   />
-                </div>
-                <div className={styles.linksWrapper}>
-                  <div className={styles.rememberMeWrapper}>
-                    <CheckBox
-                      label={'Remember me'}
-                      checked={false}
-                      checkType={CheckType.BLUE}
-                      onLabelClick={handleRememberMeClick}
-                    />
-                  </div>
-                  <Link to={'/forgot-password'}>
-                    <div
-                      className={classNames('caption', styles.forgetPassword)}
-                    >
-                      Forgot password?
-                    </div>
-                  </Link>
-                </div>
-                <div className={styles.btnWrapper}>
-                  <Button
-                    className={styles.loginButton}
-                    type={'submit'}
-                    btn={BtnType.INVERTED}
-                  >
-                    Login
-                  </Button>
-                </div>
-                {loginStatus === LoginStatus.ERROR && <div>Invalid login</div>}
+                </FormElement>
               </div>
+              <div className={styles.linksWrapper}>
+                <div className={styles.rememberMeWrapper}>
+                  <CheckBox
+                    label={'Remember me'}
+                    checked={false}
+                    checkType={CheckType.BLUE}
+                    onLabelClick={handleRememberMeClick}
+                  />
+                </div>
+                <Link to={'/forgot-password'}>
+                  <div className={classNames('caption', styles.forgetPassword)}>
+                    Forgot password?
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.btnWrapper}>
+                <Button
+                  className={styles.loginButton}
+                  type={'submit'}
+                  btn={BtnType.INVERTED}
+                >
+                  Login
+                </Button>
+              </div>
+              {loginStatus === LoginStatus.ERROR && <div>Invalid login</div>}
             </form>
           )}
         </Formik>

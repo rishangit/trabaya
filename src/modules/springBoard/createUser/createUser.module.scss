@@ -1,0 +1,73 @@
+@import '../../../scss/style.scss';
+
+.create-user {
+  @include flx('hz', 'col');
+  @include border-light();
+  margin: 20px;
+  border-radius: 20px;
+  width: 100%;
+  padding: 60px 20px;
+  height: 75vh;
+
+  .title {
+    @include page-title();
+  }
+
+  .container {
+    background-color: $panal-bg-color;
+    padding: 15px;
+    width: 60%;
+    margin: 15px 30px;
+    .form {
+      .form-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .form-element {
+          border-bottom: 1px solid $border-dark-color;
+          background-color: $panal-bg-color;
+          margin: 10px;
+          &.half-col {
+            @include clacmin('width', 50%, 20px);
+          }
+        }
+        .user-role-wrapper {
+          width: 100%;
+          margin: 10px 0 30px;
+          label{
+            padding: 0 15px;
+          }
+          .form-element-user-role {
+            margin-top: 5px;
+          }
+        }
+      }
+      .btn-wrapper {
+        @include flx('center');
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .create-user {
+    box-shadow: none;
+    padding: 0;
+    .container {
+      width: 100%;
+      .form {
+        .form-container {
+          .form-element {
+            height: 56px;
+            &.half-col {
+              width: 100%;
+            }
+          }
+        }
+        .btn-wrapper{
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

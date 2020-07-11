@@ -1,15 +1,16 @@
 @import "../../../scss/style.scss";
 
 .textBoxWrp {
-    @include flx("hz", "col");
-    min-height: 72px;
+    @include flx("vt", "row");
+    width: 100%;
+    position: relative;
     &.error {
-        .textBox {
-            border: 1px solid $error-color;
-        }
+        // .textBox {
+        //     border: 1px solid $error-color;
+        // }
     }
     .textBox {
-        border: 1px solid $textbox-border-color;
+        border: none;
         height: 56px;
         font-size: 14px;
         color:$textbox-font-color;
@@ -17,6 +18,8 @@
         border-radius: 2px;
         box-sizing: border-box;
         width: inherit;
+        background-color: transparent;
+     
 
         &::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -38,8 +41,8 @@
         }
     }
     .errorMsg {
-        float: right;
-        margin-left: auto;
+        right: 0;
         color: $error-color;
+        position: absolute;
     }
 }

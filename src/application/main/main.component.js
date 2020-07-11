@@ -8,13 +8,15 @@ import {
 } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from '../../modules/auth/auth.action';
+import { deviceTypes ,setTheme} from '../app.constants';
+import { appDeviceSettingSet, appNaviSettingSet } from '../app.action';
 import classNames from 'classnames';
 import styles from './main.module.scss';
 import Header from '../header';
 import NavigationComponent from '../nanvigation';
 import { ModalComponent } from '../modal';
-import HomeComponent from '../../modules/home';
-import CreateUserComponent from '../../modules/createUser';
+import { CreateUser, SpringDash } from '../../modules/springBoard';
+import ThemeComponent from '../../modules/theme';
 
 const MainComponent = props => {
   const history = useHistory();
@@ -34,26 +36,35 @@ const MainComponent = props => {
     }
   }, [session]);
 
+  useEffect(() => {
+    let type = deviceTypes.DESKTOP;
+    if (window.innerWidth < 576) {
+      type = deviceTypes.MOBILE;
+      dispatch(appNaviSettingSet({ show: false }));
+    }   
+    dispatch(appDeviceSettingSet({ type }));
+  }, [window.innerWidth]);
+
   return (
-    <div className={styles.mainWrp}>
+    <div className={styles.mainWrapper}>
       <BrowserRouter>
         <Header {...props} />
-        <NavigationComponent {...props}/>
+        <NavigationComponent {...props} />
         <div
           className={classNames(
-            styles.mainCon,
+            styles.container,
             !naviSetting.show && styles.hidden,
           )}
         >
           <Switch>
             {/* <Route exact path={"/projects"} component={ProjectComponent} /> */}
-            <Route path={'/home'} component={HomeComponent} />
-            <Route path={'/create_user'} component={CreateUserComponent} />
-
+            <Route path={'/home'} component={SpringDash} />
+            <Route path={'/create_user'} component={CreateUser} />
+            <Route path={'/theme'} component={ThemeComponent}/>
             <Redirect from={'/'} to={'/home'} />
           </Switch>
         </div>
-        <ModalComponent />
+        {/* <ModalComponent /> */}
       </BrowserRouter>
     </div>
   );

@@ -1,5 +1,3 @@
-@import './variable.scss';
-
 $higlight-color: var(--theme-higlight-color, #51a94b);
 
 $button-color: var(--theme-button-color, #51a94b);
@@ -9,41 +7,54 @@ $button-font-color: var(--theme-button-font-color, #ffffff);
 
 $inverted-button-color: var(--theme-inverted-button-color, #f5f7fa);
 $inverted-button-hover-color: var(--theme-inverted-button-hover-color, #e4e7eb);
-$inverted-button-active-color: var(--theme-inverted-button-active-color, #cbd2d9);
+$inverted-button-active-color: var(
+  --theme-inverted-button-active-color,
+  #cbd2d9
+);
 $inverted-button-font-color: var(--theme-inverted-button-font-color, #51a94b);
 
-
+//form element
+$form-ele-bg-color: var(--theme-form-ele-bg-color, #ffffff);
 $chcekbox-color: var(--theme-chcekbox-color, #7b8794);
-$multiselect-chip-color: var(--theme-multiselect-chip-color, #55aad4);
 
+$multiselect-chip-color: var(--theme-multiselect-chip-color, #55aad4);
 
 $textbox-border-color: var(--theme-textbox-border-color, #e4e7eb);
 $textbox-font-color: var(--theme-textbox-font-color, #616e7c);
 $textbox-placeholder-color: var(--theme-textbox-placeholder-color, #cbd2d9);
+//end - form element
 
-
+//panel
 $panal-bg-color: var(--theme-panal-bg-color, #fbfcfc);
 $panal-bg-light-color: var(--theme-panal-bg-light-color, #ffffff);
 $panal-bg-dark-color: var(--theme-panal-bg-dark-color, #eceaeb);
 $panal-inverted-font-color: var(--theme-panal-inverted-font-color, #ffffff);
 $panal-font-color: var(--theme-panal-font-color, #7b8794);
 $panel-font-dark-color: var(--theme-panel-font-dark-color, #4a484b);
+//end - panel
 
-
-
+//common
 $border-color: var(--theme-border-color, #f5f7fa);
 $border-dark-color: var(--theme-border-dark-color, #9aa5b1);
 
 $error-color: var(--theme-error-color, #ab091e);
-
+//end - common
 
 //header
 $header-height: var(--theme-header-height, 60px);
 $header-font-color: var(--theme-header-font-color, #ffffff);
 //end header
 
-
-//navigation 
+//navigation
 $navi-width: var(--theme-navi-width, 250px);
 //end - navigation
+
+//Page
 $page-container: var(--theme-page-container, 1400px);
+$page-title-font-size: var(--theme-page-Title-font-size, 32px);
+$page-font-color: var(--theme-page-font-color, #6f717b);
+//end - Page
+
+//media
+$media-tab: var(--theme-media-tab, 992px);
+$media-mobile: var(--theme-media-mobile, 576px);

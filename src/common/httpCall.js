@@ -4,7 +4,6 @@ import { serverPath } from './constants';
 const httpGet = ({ call }) => {
   const sessionString = localStorage.getItem('session');
   if (sessionString) {
-    const session = JSON.parse(sessionString);
     let request_url = `${serverPath}/api/${call}`;
     return ajax({
       url: request_url,
@@ -34,7 +33,6 @@ const httpPost = ({ call, data }) => {
   const sessionString = localStorage.getItem('session');
   let jsonData = JSON.stringify(data);
   if (sessionString) {
-    const session = JSON.parse(sessionString);
      request_url =`${request_url}/api/${call}`;
      headers =  {
       ...headers,

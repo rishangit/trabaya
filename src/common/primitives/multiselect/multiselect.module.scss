@@ -1,11 +1,17 @@
 @import '../../../scss/style.scss';
 
 .multiWrp{
+    @include flx("vt", "row");
     width: 100%;
-    border: 1px solid $border-color;
+    position: relative;
     .dorpWrp{
-        width: 100%;
+        // @include clacmin('width', 100%, 25px);
         border: none;
+    }
+    .errorMsg {
+        right: 0;
+        color: $error-color;
+        position: absolute;
     }
 }
 

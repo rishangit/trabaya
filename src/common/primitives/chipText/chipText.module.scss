@@ -1,0 +1,17 @@
+@import '../../../scss/style.scss';
+.chip-wrapper {
+  position: relative;
+  & > div {
+    border: none !important;
+    background-color: transparent !important;
+
+    input {
+      background-color: transparent !important;
+    }
+  }
+  .errorMsg {
+    right: 0;
+    color: $error-color;
+    position: absolute;
+  }
+}

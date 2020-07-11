@@ -1,20 +1,20 @@
 @import "./theme-variables.scss";
 
 @mixin page-title {
-  font-size: $page-fontsize;
+  font-size:$page-title-font-size;
+  font-family: 'lato-regular';
 }
 
 @mixin page-container {
   max-width: $page-container;
+  color: $page-font-color;
   width: 100%;
-  margin: 0 auto;
 }
 
 @mixin content-block {
   border: 1px solid $border-color;
   border-radius: 5px;
 }
-
 
 @mixin label {
   color: $font-color;
@@ -25,6 +25,9 @@
   color: $header-active ;
 }
 
+@mixin form-element-underline {
+  border: 2px solid $border-dark-color;
+}
 
 @mixin clacmin($property, $main, $sub) {
   #{$property}: calc(#{$main} - #{$sub});
@@ -37,6 +40,13 @@
   #{$property}: calc(-1 * #{$val});
 }
 
+
+@mixin border-light(){
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(123, 135, 148, 0.3);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(123, 135, 148, 0.3);
+  box-shadow: 0px 0px 14px 0px rgba(123, 135, 148, 0.3);
+}
+
 @mixin flx($align: null, $direction: null) {
   display: flex;
   @if ($direction == "col") {
@@ -47,6 +57,9 @@
       @if ($align == "hz") {
           align-items: center;
       }
+      @if ($align == "top") {
+        justify-content: flex-start;
+    }
   } @else if ($direction == "row") {
       flex-direction: row;
       @if ($align == "vt") {

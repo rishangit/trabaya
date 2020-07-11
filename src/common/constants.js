@@ -1,5 +1,4 @@
- export const serverPath = 'http://localhost:3001';
-// export const serverPath = 'http://staging.traction.network';
+export const serverPath = 'http://localhost:3001';
 
 export const Res = {
   ERROR: 0,
