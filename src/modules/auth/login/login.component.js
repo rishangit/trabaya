@@ -96,7 +96,7 @@ const LoginComponent = props => {
                   Login
                 </Button>
               </div>
-              {loginStatus === LoginStatus.ERROR && <div>Invalid login</div>}
+              {loginStatus === LoginStatus.ERROR && <div className={styles.error}>Invalid login</div>}
             </form>
           )}
         </Formik>

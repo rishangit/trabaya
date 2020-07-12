@@ -13,6 +13,8 @@
     }
     .user-container{
       @include flx('vt', 'row');
+      box-sizing: border-box;
+      flex-wrap: wrap;
     }
   }
 }

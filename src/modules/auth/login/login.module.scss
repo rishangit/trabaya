@@ -56,6 +56,11 @@
           float: left;
         }
       }
+
+      .error{
+        color: $error-color;
+        margin-top: 10px;
+      }
     }
   }
 }

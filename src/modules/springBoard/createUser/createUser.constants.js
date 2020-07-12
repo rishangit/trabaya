@@ -29,6 +29,14 @@ const departments = [
     id: 'dep2',
     name: 'Department 2',
   },
+  {
+    id: 'dep3',
+    name: 'Department 3',
+  },
+  {
+    id: 'dep4',
+    name: 'Department 4',
+  },
 ];
 
 export { initModel, validation, userRoles, departments };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './header.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,15 +6,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Icon, mdSize } from '../../common/icon';
 import { appNaviSettingSet, appSearchSet } from '../../application/app.action';
 import { Search } from '../../common/primitives';
+import { springBoardListUser } from '../../modules/springBoard/springBoard.action';
 
 const Header = props => {
   const dispatch = useDispatch();
   const [debounce, setDebounce] = useState(null);
   const {
     authReducer: { session },
-    appReducer: { naviSetting },
+    appReducer: { naviSetting, search },
     springReducer: { userList },
   } = useSelector(state => state);
+
+  useEffect(() => {
+    if (userList.length === 0) dispatch(springBoardListUser({ query: search }));
+  }, [search]);
 
   const handleMenuClick = e => {
     dispatch(appNaviSettingSet({ show: !naviSetting.show }));

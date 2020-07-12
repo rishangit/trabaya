@@ -14,7 +14,7 @@ const SuccessMessage = props => {
   return (
     <div className={styles.messageWrapper}>
       <h4>User saved succefully </h4>
-      <div onClick={handleAddAnother}>Add another</div>
+      <div onClick={handleAddAnother} className={styles.addAnother}>Add another</div>
     </div>
   );
 };

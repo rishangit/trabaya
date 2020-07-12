@@ -2,7 +2,7 @@ import React from 'react';
 import Select from 'react-dropdown-select';
 import styles from './multiselect.module.scss';
 import classNames from 'classnames';
-import './multiselect.scss';
+
 import { Icon, mdSize } from '../../icon';
 import ReactTooltip from 'react-tooltip';
 
@@ -29,7 +29,7 @@ const MultiSelectComponent = props => {
     values[name] = val;
   };
   return (
-    <div className={classNames(styles.multiWrp,'drop-wrpper')} >
+    <div className={classNames(styles.multiWrp, 'multiwrp')} >
       <Select
         multi
         className={styles.dorpWrp}

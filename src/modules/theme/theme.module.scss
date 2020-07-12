@@ -13,3 +13,13 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .theme-wrapper {
+    @include flx('center');
+    margin-top: 50px;
+    .container {
+      @include flx('hz', 'col');
+    }
+  }
+}

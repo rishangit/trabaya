@@ -35,14 +35,6 @@ const CreateUserComponent = props => {
     dispatch(springBoardAddUser(model));
   };
 
-  // useEffect(() => {
-  //   if (newUserStatus === SpringUserStatus.USER_SUCCESS) {
-  //     alert('Usre Saved successfully');
-  //     setModel(initModel);
-  //     dispatch(springBoardNewUserStatus(SpringUserStatus.USER_NEW));
-  //   }
-  // }, [newUserStatus]);
-
   return (
     <>
       {newUserStatus !== SpringUserStatus.USER_SUCCESS ? (

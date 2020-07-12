@@ -4,4 +4,8 @@
 .message-wrapper{
   @include flx('hz', 'col');
   margin-top: 200px;
+
+  .addAnother{
+    cursor: pointer;
+  }
 }
