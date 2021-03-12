@@ -51,7 +51,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-awesome-modal": "^2.0.5",
     "react-chips": "^0.8.0",
-    "react-dev-utils": "^10.2.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.13.1",
     "react-dropdown-select": "^4.4.2",
     "react-helmet": "^6.1.0",
